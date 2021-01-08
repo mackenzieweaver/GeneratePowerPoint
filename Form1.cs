@@ -18,15 +18,15 @@ namespace GeneratePowerPoint
             InitializeComponent();
         }
         
-        // TODO: open and insert new slide in powerpoint
+        // TODO: insert new slide in powerpoint
         private void generateSlide_Click(object sender, EventArgs e)
         {
             // open file explorer dialog box
-
-            // user selects file
-
-            // if file is powerpoint
-
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // user selects file
+                var pp = openFileDialog1.FileName;
+            }
             // open and insert slide
         }
 

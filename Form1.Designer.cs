@@ -60,6 +60,7 @@ namespace GeneratePowerPoint
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -118,7 +119,7 @@ namespace GeneratePowerPoint
             this.generateSlide.Name = "generateSlide";
             this.generateSlide.Size = new System.Drawing.Size(96, 23);
             this.generateSlide.TabIndex = 0;
-            this.generateSlide.Text = "Generate a Slide";
+            this.generateSlide.Text = "Add Slide";
             this.generateSlide.UseVisualStyleBackColor = true;
             this.generateSlide.Click += new System.EventHandler(this.generateSlide_Click);
             // 
@@ -412,6 +413,11 @@ namespace GeneratePowerPoint
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "PowerPoint Presentations|*.ppt;*.pptx;";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,6 +482,7 @@ namespace GeneratePowerPoint
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
