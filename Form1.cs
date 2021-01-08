@@ -13,27 +13,50 @@ namespace GeneratePowerPoint
 {
     public partial class Form1 : Form
     {
+        private string PowerPointPath { get; set; } // file path
+        private List<string> Images { get; set; } // urls to images
+
         public Form1()
         {
             InitializeComponent();
         }
-        
-        // TODO: insert new slide in powerpoint
-        private void generateSlide_Click(object sender, EventArgs e)
+
+        private void loadPPT_Click(object sender, EventArgs e)
         {
             // open file explorer dialog box
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 // user selects file
-                var pp = openFileDialog1.FileName;
+                PowerPointPath = openFileDialog1.FileName;
+                pptFilePath.Text = $"File: {PowerPointPath}";
             }
-            // open and insert slide
+            else
+            {
+                pptFilePath.Text = $"File: n/a";
+            }
+        }
+
+        // TODO: insert new slide in powerpoint
+        private void generateSlide_Click(object sender, EventArgs e)
+        {
+            // file path has been made
+            if(PowerPointPath != null)
+            {
+                // new slide
+                // open ppt
+                // add slide
+                // save
+                // close ppt
+            }
+            else
+            {
+                MessageBox.Show("Powerpoint file path missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // TODO: request new pictures
         private void titleBox_TextChanged(object sender, EventArgs e)
         {
-            var hook = new WebhookResponse();
             
         }
 
@@ -75,12 +98,6 @@ namespace GeneratePowerPoint
             }
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            // Close the form.
-            Close();
-        }
-
         private void boldButton_Click(object sender, EventArgs e)
         {
             Font currentFont = richTextBox1.SelectionFont;
@@ -103,5 +120,17 @@ namespace GeneratePowerPoint
 
             richTextBox1.Focus();
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            // Close the form.
+            Close();
+        }
+
+        // Example - load picture url
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    pictureBox1.Load("https://i.imgur.com/AeruNiR.jpg");
+        //}
     }
 }

@@ -32,23 +32,24 @@ namespace GeneratePowerPoint
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.loadPPT = new System.Windows.Forms.Button();
             this.generateSlide = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.titleBox = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.boldButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,6 +62,7 @@ namespace GeneratePowerPoint
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pptFilePath = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -104,34 +106,55 @@ namespace GeneratePowerPoint
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.loadPPT);
             this.flowLayoutPanel1.Controls.Add(this.generateSlide);
             this.flowLayoutPanel1.Controls.Add(this.closeButton);
+            this.flowLayoutPanel1.Controls.Add(this.pptFilePath);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 407);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(794, 40);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // loadPPT
+            // 
+            this.loadPPT.BackColor = System.Drawing.Color.Green;
+            this.loadPPT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadPPT.ForeColor = System.Drawing.Color.White;
+            this.loadPPT.Location = new System.Drawing.Point(3, 3);
+            this.loadPPT.Name = "loadPPT";
+            this.loadPPT.Size = new System.Drawing.Size(86, 37);
+            this.loadPPT.TabIndex = 4;
+            this.loadPPT.Text = "Load PPT";
+            this.loadPPT.UseVisualStyleBackColor = false;
+            this.loadPPT.Click += new System.EventHandler(this.loadPPT_Click);
+            // 
             // generateSlide
             // 
             this.generateSlide.AutoSize = true;
-            this.generateSlide.Location = new System.Drawing.Point(3, 3);
+            this.generateSlide.BackColor = System.Drawing.Color.Orange;
+            this.generateSlide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateSlide.ForeColor = System.Drawing.Color.White;
+            this.generateSlide.Location = new System.Drawing.Point(95, 3);
             this.generateSlide.Name = "generateSlide";
-            this.generateSlide.Size = new System.Drawing.Size(96, 23);
+            this.generateSlide.Size = new System.Drawing.Size(86, 37);
             this.generateSlide.TabIndex = 0;
             this.generateSlide.Text = "Add Slide";
-            this.generateSlide.UseVisualStyleBackColor = true;
+            this.generateSlide.UseVisualStyleBackColor = false;
             this.generateSlide.Click += new System.EventHandler(this.generateSlide_Click);
             // 
             // closeButton
             // 
             this.closeButton.AutoSize = true;
-            this.closeButton.Location = new System.Drawing.Point(105, 3);
+            this.closeButton.BackColor = System.Drawing.Color.Crimson;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(187, 3);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.Size = new System.Drawing.Size(64, 37);
             this.closeButton.TabIndex = 3;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // titleBox
@@ -183,6 +206,15 @@ namespace GeneratePowerPoint
             this.flowLayoutPanel2.Size = new System.Drawing.Size(794, 61);
             this.flowLayoutPanel2.TabIndex = 6;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(3, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -193,6 +225,15 @@ namespace GeneratePowerPoint
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(130, 3);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 13;
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -205,6 +246,15 @@ namespace GeneratePowerPoint
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(257, 3);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 14;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -216,6 +266,15 @@ namespace GeneratePowerPoint
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(384, 3);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.TabIndex = 15;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GeneratePowerPoint.Properties.Resources.missing;
@@ -225,6 +284,15 @@ namespace GeneratePowerPoint
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(511, 3);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(15, 14);
+            this.checkBox5.TabIndex = 16;
+            this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // pictureBox6
             // 
@@ -247,58 +315,15 @@ namespace GeneratePowerPoint
             // 
             // boldButton
             // 
+            this.boldButton.BackColor = System.Drawing.Color.White;
+            this.boldButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boldButton.Location = new System.Drawing.Point(3, 3);
             this.boldButton.Name = "boldButton";
             this.boldButton.Size = new System.Drawing.Size(75, 26);
             this.boldButton.TabIndex = 0;
             this.boldButton.Text = "Bold";
-            this.boldButton.UseVisualStyleBackColor = true;
+            this.boldButton.UseVisualStyleBackColor = false;
             this.boldButton.Click += new System.EventHandler(this.boldButton_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 3);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(130, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(257, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(384, 3);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(511, 3);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 16;
-            this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel4
             // 
@@ -418,6 +443,15 @@ namespace GeneratePowerPoint
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "PowerPoint Presentations|*.ppt;*.pptx;";
             // 
+            // pptFilePath
+            // 
+            this.pptFilePath.AutoSize = true;
+            this.pptFilePath.Location = new System.Drawing.Point(257, 0);
+            this.pptFilePath.Name = "pptFilePath";
+            this.pptFilePath.Size = new System.Drawing.Size(46, 13);
+            this.pptFilePath.TabIndex = 10;
+            this.pptFilePath.Text = "File: n/a";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,6 +517,8 @@ namespace GeneratePowerPoint
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button loadPPT;
+        private System.Windows.Forms.Label pptFilePath;
     }
 }
 
