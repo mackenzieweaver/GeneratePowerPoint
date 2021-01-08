@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Google.Cloud.Dialogflow.V2;
 
 namespace GeneratePowerPoint
 {
@@ -17,14 +18,27 @@ namespace GeneratePowerPoint
             InitializeComponent();
         }
         
-        // 1 TODO: export a file in .pptx
+        // TODO: open and insert new slide in powerpoint
         private void generateSlide_Click(object sender, EventArgs e)
         {
+            // open file explorer dialog box
+
+            // user selects file
+
+            // if file is powerpoint
+
+            // open and insert slide
+        }
+
+        // TODO: request new pictures
+        private void titleBox_TextChanged(object sender, EventArgs e)
+        {
+            var hook = new WebhookResponse();
             
         }
 
-        // 2 TODO: request new pictures
-        private void titleBox_TextChanged(object sender, EventArgs e)
+        // TODO: if bold text request new pictures
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -43,12 +57,6 @@ namespace GeneratePowerPoint
             {
                 titleBox.Text = "Click to add title";
             }
-        }
-
-        // 4 TODO: if bold text request new pictures
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void richTextBox1_Click(object sender, EventArgs e)
@@ -71,6 +79,29 @@ namespace GeneratePowerPoint
         {
             // Close the form.
             Close();
+        }
+
+        private void boldButton_Click(object sender, EventArgs e)
+        {
+            Font currentFont = richTextBox1.SelectionFont;
+            FontStyle newFontStyle;
+
+            if (richTextBox1.SelectionFont.Bold == true)
+            {
+                newFontStyle = FontStyle.Regular;
+            }
+            else
+            {
+                newFontStyle = FontStyle.Bold;
+            }
+
+            richTextBox1.SelectionFont = new Font(
+               currentFont.FontFamily,
+               currentFont.Size,
+               newFontStyle
+            );
+
+            richTextBox1.Focus();
         }
     }
 }
