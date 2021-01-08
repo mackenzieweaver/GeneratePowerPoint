@@ -62,6 +62,7 @@ namespace GeneratePowerPoint
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.numSlides = new System.Windows.Forms.Label();
             this.pptFilePath = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -110,6 +111,7 @@ namespace GeneratePowerPoint
             this.flowLayoutPanel1.Controls.Add(this.generateSlide);
             this.flowLayoutPanel1.Controls.Add(this.closeButton);
             this.flowLayoutPanel1.Controls.Add(this.pptFilePath);
+            this.flowLayoutPanel1.Controls.Add(this.numSlides);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 407);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -118,7 +120,7 @@ namespace GeneratePowerPoint
             // 
             // loadPPT
             // 
-            this.loadPPT.BackColor = System.Drawing.Color.Green;
+            this.loadPPT.BackColor = System.Drawing.Color.SeaGreen;
             this.loadPPT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadPPT.ForeColor = System.Drawing.Color.White;
             this.loadPPT.Location = new System.Drawing.Point(3, 3);
@@ -132,7 +134,7 @@ namespace GeneratePowerPoint
             // generateSlide
             // 
             this.generateSlide.AutoSize = true;
-            this.generateSlide.BackColor = System.Drawing.Color.Orange;
+            this.generateSlide.BackColor = System.Drawing.Color.SandyBrown;
             this.generateSlide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generateSlide.ForeColor = System.Drawing.Color.White;
             this.generateSlide.Location = new System.Drawing.Point(95, 3);
@@ -146,7 +148,7 @@ namespace GeneratePowerPoint
             // closeButton
             // 
             this.closeButton.AutoSize = true;
-            this.closeButton.BackColor = System.Drawing.Color.Crimson;
+            this.closeButton.BackColor = System.Drawing.Color.IndianRed;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.White;
             this.closeButton.Location = new System.Drawing.Point(187, 3);
@@ -443,10 +445,21 @@ namespace GeneratePowerPoint
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "PowerPoint Presentations|*.ppt;*.pptx;";
             // 
+            // numSlides
+            // 
+            this.numSlides.AutoSize = true;
+            this.numSlides.Location = new System.Drawing.Point(309, 14);
+            this.numSlides.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
+            this.numSlides.Name = "numSlides";
+            this.numSlides.Size = new System.Drawing.Size(57, 13);
+            this.numSlides.TabIndex = 11;
+            this.numSlides.Text = "Slides #: 0";
+            // 
             // pptFilePath
             // 
             this.pptFilePath.AutoSize = true;
-            this.pptFilePath.Location = new System.Drawing.Point(257, 0);
+            this.pptFilePath.Location = new System.Drawing.Point(257, 14);
+            this.pptFilePath.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
             this.pptFilePath.Name = "pptFilePath";
             this.pptFilePath.Size = new System.Drawing.Size(46, 13);
             this.pptFilePath.TabIndex = 10;
@@ -519,6 +532,7 @@ namespace GeneratePowerPoint
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button loadPPT;
         private System.Windows.Forms.Label pptFilePath;
+        private System.Windows.Forms.Label numSlides;
     }
 }
 
