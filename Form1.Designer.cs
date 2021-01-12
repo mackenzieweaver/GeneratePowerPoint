@@ -35,6 +35,8 @@ namespace GeneratePowerPoint
             this.loadPPT = new System.Windows.Forms.Button();
             this.generateSlide = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.pptFilePath = new System.Windows.Forms.Label();
+            this.numSlides = new System.Windows.Forms.Label();
             this.titleBox = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -62,8 +64,6 @@ namespace GeneratePowerPoint
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.numSlides = new System.Windows.Forms.Label();
-            this.pptFilePath = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -158,6 +158,26 @@ namespace GeneratePowerPoint
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // pptFilePath
+            // 
+            this.pptFilePath.AutoSize = true;
+            this.pptFilePath.Location = new System.Drawing.Point(257, 14);
+            this.pptFilePath.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
+            this.pptFilePath.Name = "pptFilePath";
+            this.pptFilePath.Size = new System.Drawing.Size(46, 13);
+            this.pptFilePath.TabIndex = 10;
+            this.pptFilePath.Text = "File: n/a";
+            // 
+            // numSlides
+            // 
+            this.numSlides.AutoSize = true;
+            this.numSlides.Location = new System.Drawing.Point(309, 14);
+            this.numSlides.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
+            this.numSlides.Name = "numSlides";
+            this.numSlides.Size = new System.Drawing.Size(57, 13);
+            this.numSlides.TabIndex = 11;
+            this.numSlides.Text = "Slides #: 0";
             // 
             // titleBox
             // 
@@ -444,26 +464,6 @@ namespace GeneratePowerPoint
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "PowerPoint Presentations|*.ppt;*.pptx;";
-            // 
-            // numSlides
-            // 
-            this.numSlides.AutoSize = true;
-            this.numSlides.Location = new System.Drawing.Point(309, 14);
-            this.numSlides.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
-            this.numSlides.Name = "numSlides";
-            this.numSlides.Size = new System.Drawing.Size(57, 13);
-            this.numSlides.TabIndex = 11;
-            this.numSlides.Text = "Slides #: 0";
-            // 
-            // pptFilePath
-            // 
-            this.pptFilePath.AutoSize = true;
-            this.pptFilePath.Location = new System.Drawing.Point(257, 14);
-            this.pptFilePath.Margin = new System.Windows.Forms.Padding(3, 14, 3, 0);
-            this.pptFilePath.Name = "pptFilePath";
-            this.pptFilePath.Size = new System.Drawing.Size(46, 13);
-            this.pptFilePath.TabIndex = 10;
-            this.pptFilePath.Text = "File: n/a";
             // 
             // Form1
             // 

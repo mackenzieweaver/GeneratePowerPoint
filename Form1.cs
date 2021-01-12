@@ -90,30 +90,24 @@ namespace GeneratePowerPoint
                 // add slide
                 var slide = pres.Slides.AddEmptySlide(layoutSlide);
                 numSlides.Text = $"Slides #: {pres.Slides.Count}";
+                
+                // add text
+                IAutoShape ashp = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);// Add an AutoShape of Rectangle type                
+                ashp.AddTextFrame(" ");// Add TextFrame to the Rectangle                
+                ITextFrame txtFrame = ashp.TextFrame;// Accessing the text frame                
+                IParagraph para = txtFrame.Paragraphs[0];// Create the Paragraph object for text frame                
+                IPortion portion = para.Portions[0];// Create Portion object for paragraph                
+                portion.Text = "Aspose TextBox";// Set Text
 
-                // add title
-
-                // Add an AutoShape of Rectangle type
-                IAutoShape ashp = slide.Shapes.AddAutoShape(ShapeType.Rectangle, 150, 75, 150, 50);
-                // Add TextFrame to the Rectangle
-                ashp.AddTextFrame(" ");
-                // Accessing the text frame
-                ITextFrame txtFrame = ashp.TextFrame;
-                // Create the Paragraph object for text frame
-                IParagraph para = txtFrame.Paragraphs[0];
-                // Create Portion object for paragraph
-                IPortion portion = para.Portions[0];
-                // Set Text
-                portion.Text = "Aspose TextBox";
+                // add title                
 
                 // add body
 
                 // add images
 
                 // save
-                string FilePath = Path.GetFileName(PowerPointPath);
                 SaveFormat saveFormat = Path.GetExtension(PowerPointPath) == ".ppt" ? SaveFormat.Ppt : SaveFormat.Pptx;
-                pres.Save(FilePath, saveFormat);
+                pres.Save(PowerPointPath, saveFormat);
             }
             else
             {
